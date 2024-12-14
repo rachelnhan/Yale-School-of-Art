@@ -1,0 +1,175 @@
+/* OTHER PAGE HERO */
+
+.hero-img {
+	width: 45%;
+	height: auto;
+	float: right;
+}
+
+.hero-img-div { /* image always in front */
+	position: absolute;
+    grid-area: 1/1; 
+    z-index: 2;
+    justify-self: end;
+    right: 0;
+    bottom: 0;
+}
+
+.hero-text-div { /* text always in back */
+	position: absolute;
+    grid-area: 1/1;
+    align-content: center;
+    justify-self: start; 
+    z-index: 1;
+    background-color: #F6F6F6;
+    width: 70%;
+    padding: 50px 0;
+}
+
+.external-hero-text { /* HERO TEXT WIDTH CONSTRAINTS */
+	margin-left: 95px;
+	max-width: 50%;
+}
+
+/* GRID */
+
+.grid-container-about {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+  grid-gap: 2px;
+}
+
+.grid-item-about {
+	display: flex;
+	flex-direction: column;
+	background-color: #00356B;
+	padding: 30px 0 30px 25px;
+	height: 249px;
+	justify-content: end;
+}
+
+.darkblue-bg {
+	background-color: #00356B;
+	padding: 50px 20px 50px 175px;
+	width: auto;
+}
+
+/* SMARTPHONE VERSION */
+
+@media screen and (max-width: 480px) {
+
+	/* HERO */
+
+	.hero-div {
+	    display: flex;
+	    flex-direction: column;
+	    width: 100%;
+	    padding: 20px 0 30px 0;
+	    margin-bottom: 30px;
+	    position: static;
+	}
+
+	.hero-padding {
+		padding-bottom: 40px;
+	}
+
+	.home-front-div { /* WELCOME TO YALE SMALL SQUARE */
+		position: static;
+		z-index: 1;
+	}
+
+	.home-back-div { /* BIG HERO IMG */
+		position: static;
+		z-index: 1;
+	}
+
+	.hero-img {
+		float: none;
+		width: 100%;
+		height: 40%;
+		object-fit: cover;
+		object-position: 0 20%;
+	}
+
+	.hero-img-div {
+		position: static;
+		z-index: 1;
+	}
+
+	.hero-text-div {
+		position: static;
+		width: 100%;
+		padding: 30px 0 40px 0;
+	}
+
+	.hero-box-column { /* KEEPS CONTENT IN THE GRAY SQUARE IN A COLUMN */
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+		height: auto;
+		padding-left: 24px;
+		gap: 18px;
+	}
+
+	.external-hero-text {
+	    margin-left: 0px;
+	    max-width: 90%;
+	}
+
+	/* STYLES */
+	.title {
+		font-size: 32px;
+		width: auto;
+	}
+
+	.grid-2 {
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+	}
+
+	.grid-2-item {
+		
+	}
+
+	.spacing {
+		gap: 25px;
+	}
+
+	.margin-content-left {
+		margin-left: 24px;
+	}
+
+	.margin-content-right {
+		margin-left: 24px;
+		margin-right: 24px;
+	}
+
+	.darkblue-bg {
+	    background-color: #00356B;
+	    padding: 30px 10px 30px 24px;
+	    margin-right: 24px;
+	}
+
+	/* GRID */
+
+	.grid-container-about {
+	  display: grid;
+	  grid-template: 1fr 1fr 1fr 1fr / 1fr;
+	  grid-gap: 2px;
+	}
+
+	.grid-item-about {
+		display: flex;
+		flex-direction: column;
+		background-color: #00356B;
+		padding: 20px 0 20px 24px;
+		height: 170px;
+		justify-content: end;
+	}
+
+	.box-label {
+		font-size: 20px;
+	}
+}

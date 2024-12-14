@@ -1,18 +1,103 @@
 /* LAYOUT */
 
+h1, h2, h3, h4, h5 {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	padding-inline-start: 0;
+}
+
 .margin-default {
-    margin: 0 80px;
+    margin: 0 100px;
+}
+
+.margin-content {
+    margin: 0 175px;
+}
+
+.margin-content-left {
+	margin-left: 175px;
+}
+
+.margin-content-right {
+	margin-right: 175px;
 }
 
 .padding-default {
-	padding: 60px 0;
+	padding: 80px 0;
+}
+
+.hero-padding {
+	padding-top: 80px;
 }
 
 .padding-50 {
 	padding: 50px 0;
 }
 
+.padding-40 {
+	padding: 40px 0;
+}
+
+.padding-20 {
+	padding: 20px 0;
+}
+
+.small-padding-bottom {
+	padding-bottom: 10px;
+}
+
+.padding-above-footer { /* PADDING FOR SECTION BEFORE FOOTER */
+	padding-bottom: 120px;
+}
+
+.side-div {
+	max-width: 300px;
+}
+
+.external { /* LINE FOR EXTERNAL PAGE NAV */
+	border-bottom: solid 1px #CCC;
+	padding-bottom: 10px;
+}
+
 /* FLEX */
+
+.flex-2 { /*FLEX TWO ITEMS ROW */
+	display: flex;
+	align-items: start;
+}
+
+.align-items-center {
+	align-items: center;
+}
+
+.flex-item-1 {
+	flex: 1;
+}
+
+.flex-item-2 {
+	flex: 2;
+	width: 544px;
+}
+
+.spacing { /* KEEPS CONTENT IN A COLUMN AND SPACED 40PX*/
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.grid-2 {
+	display: grid;
+	grid-template: 1fr / 1fr 2fr;
+	gap: 10%;
+}
+
+.grid-2-item {
+	display: flex;
+	flex-direction: column;
+}
 
 /* COLOUR */
 
@@ -24,58 +109,107 @@
 	color: #00356B;
 }
 
-button {
-	background-color: #00356B;
-	padding: 8px 12px;
+.gray {
+	color: #909090;
 }
 
-.reverse {
+.white {
+	color: white;
+}
+
+.gray-btn {
+	background-color: #FFFFFF;
+	border: solid 1px #CCCCCC;
+	width: 46px;
+	height: 46px;
+	padding: 14px 12px;
+}
+
+.whiteline-btn {
+	background-color: transparent;
+	border: solid 1px white;
+}
+
+button { /* BASE BTN IS BLUE */
+	background-color: #00356B;
+	padding: 12px 24px;
+	border: none;
+	max-width: 170px;
+}
+
+.button-large {
+	min-width: 190px;
+}
+
+.button-small {
+	max-width: 142px;
+}
+
+.button-gap {
+	padding-right: 10px;
+}
+
+.reverse { /* SECONDARY BTN */
 	border-color: #00356B;
 	border-width: 2px;
 	border-style: solid;
-	background-color: #F6F6F6;
+	background-color: transparent;
 }
 
 /* TEXT STYLES */
 
-p {
+p { /* BODY TEXT */
 	color: #000;
 	font-family: "Instrument Sans";
 	font-size: 15px;
 	font-style: normal;
 	font-weight: 500;
-	line-height: 150%; /* 22.5px */
+	line-height: 150%;
+	margin: 0;
 }
 
-.caption {
-	color: #5189CC;
+.caption { /* SECTION CAPTIONS */
 	font-family: "Instrument Sans";
 	font-size: 12px;
 	font-style: normal;
-	font-weight: 500;
-	line-height: 150%; /* 22.5px */
+	font-weight: 700;
+	margin: 10px 0;
 }
 
-a {
+.title {
+	color: #00356B;
+	font-family: "IBM Plex Serif";
+	font-size: 64px;
+	font-style: normal;
+	font-weight: 400;
+	width: 740px;
+}
+
+.section-title {
+	color: #000;
+	font-family: "Instrument Sans";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+}
+
+a { /* BLUE BUTTON TEXT */
 	color: white;
 	font-family: "Instrument Sans";
 	font-size: 12px;
 	font-style: normal;
 	font-weight: 700;
-	line-height: 150%; /* 18px */
-	letter-spacing: -0.132px;
 	text-decoration: none;
 }
 
-h1 {
+h1 { /* Page titles */
 	font-family: "IBM Plex Serif";
 	font-size: 40px;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 130%; /* 52px */
 }
 
-h2 {
+h2 { /* Yale School of Art mini title */
 	color: #00356B;
 	font-family: "IBM Plex Serif";
 	font-size: 32px;
@@ -83,43 +217,615 @@ h2 {
 	font-weight: 400;
 }
 
-h3 {
+h3 { /* BLUE BOX TEXT */
 	color: #FFF;
 	font-family: "IBM Plex Serif";
 	font-size: 64px;
 	font-style: normal;
 	font-weight: 500;
-	line-height: 150%; /* 96px */
+}
+
+.newsletter {
+	color: #FFF;
+	font-family: "Instrument Sans";
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	margin: 15px 0;
+	line-height: 150%;
+}
+
+.bold {
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.buttons {
+	font-family: "Instrument Sans";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 150%;
+}
+
+.quote {
+	color: #000;
+	font-family: "Instrument Sans";
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 150%;
+	border-bottom: solid 1px black;
+	padding-top: 36px;
+	padding-bottom: 55px;
+	margin-bottom: 20px;
+}
+
+.side-text {
+	margin: 20px 0;
 }
 
 .subtitle {
+	color: #5189CC;
+	font-family: "Instrument Sans";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+}
+
+/* SHAPES & BACKGROUNDS */
+
+.gray-bg {
+	background-color: #F9F9F9;
+}
+
+.underline {
+	border-bottom: solid 1px white;
+	padding-bottom: 30px;
+	margin-bottom: 40px;
+}
+
+.short-underline {
+	border-bottom: solid 1px black;
+	max-width: 18px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-color: #D9D9D9;
+}
+
+.testimonial-img {
+	border-radius: 100%;
+	border: 3px solid #5CA6FF;
+	width: 69px;
+	height: 69px;
+}
+
+/* NAVIGATION BAR */
+
+.flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+#nav li {
+    list-style-type: none;
+    display: inline;
+    padding: 0px 40px;
+}
+
+.nav-btn-gap {
+	display: flex;
+    gap: 16px;
+}
+
+/* END OF NAV */
+
+/* HOMEPAGE OVERLAPPING HERO */
+
+.home-hero-img {
+	width: 120%;
+	height: 120%;
+	float: right;
+}
+
+.hero-div {
+    display: grid;
+    position: relative;
+    width: 100%;
+    height: 511px;
+    padding: 60px 0 80px 0;
+    margin-bottom: 80px;
+}
+
+.home-front-div { /* WELCOME TO YALE SMALL SQUARE */
+	position: absolute;
+	bottom: 0;
+    grid-area: 1/1; 
+    justify-self: start; 
+    z-index: 2; 
+	background-color: #F6F6F6;
+	padding: 60px 70px;
+}
+
+.home-back-div { /* BIG HERO IMG */
+	position: absolute;
+    grid-area: 1/1;
+    justify-self: end; 
+    z-index: 1;
+    width: 70%;
+}
+
+.hero-box-column { /* KEEPS CONTENT IN THE GRAY SQUARE IN A COLUMN */
+	display: flex;
+	flex-direction: column;
+	height: 347px;
+	justify-content: space-evenly;
+}
+
+.home-hero-text {
+	max-width: 350px;
+}
+
+/* HOMEPAGE GRID BOXES */
+
+.grid-container {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr 1fr;
+  grid-gap: 2px;
+}
+
+.grid-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: #00356B;
+	padding: 30px 0 30px 30px;
+	height: 310px;
+}
+
+.box-spacing {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	width: 80%;
+}
+
+.box-text {
+	color: #000;
+	font-size: 16px;
+	font-family: "Instrument Sans";
+	font-style: normal;
+	font-weight: 500;
+	line-height: 150%;
+}
+
+.box-label { /* BLUE BOX LABELS */
 	color: #FFF;
 	font-family: "Instrument Sans";
 	font-size: 20px;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 150%; /* 30px */
-	letter-spacing: -0.22px;
+	margin: 10px 0 0 0;
 }
 
+/* CALENDAR */
 
-/* SHAPES & BACKGROUNDS */
-
-.gray-square {
-	background-color: #F6F6F6;
-	width: 455px;
-	height: 437px;
-	padding: 45px 62px;
+.calendar-grid {
+	display: grid;
+	grid-template: 1fr 1fr / 1fr 1fr;
+	grid-row-gap: 60px;
+	grid-column-gap: 44px;
+	width: 60%;
 }
 
-.blue-square {
-	background-color: #00356B;
-	width: 309px;
-	height: 310px;
-	padding: 45px 62px;
-	padding: 30px 0 30px 25px;
+.calendar-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 10px;
 }
 
-.gray-bg {
-	background-color: #F9F9F9;
+.blk-underline {
+	border-bottom: solid 1px black;
+	padding-bottom: 20px;
 }
+
+.calendar-date {
+	margin: 10px 0;
+}
+
+.calendar-header {
+	color: #000;
+	font-family: "Instrument Sans";
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 150%;
+}
+
+.flex-row-top {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+}
+
+/* FOOTER */ 
+
+.footer-column {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.padding-footer {
+	padding: 85px 75px 95px 75px;
+	background: #272727;
+	color: white;
+}
+
+.footer-1-flex {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer-nav-flex {
+	display: flex;
+	width: 65%;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding-right: 30px;
+}
+
+.flex-gap-50 {
+	display: flex;
+	flex-direction: row;
+	gap: 50px;
+}
+
+.flex-gap-25 {
+	display: flex;
+	flex-direction: row;
+	gap: 25px;
+	align-items: center;
+}
+
+.flex-gap {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+footer p {
+	color: white;
+	font-weight: 400;
+	line-height: 0;
+	margin-top: 22px;
+}
+
+footer .header {
+	color: white;
+	font-family: "Instrument Sans";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 0;
+	margin-bottom: 8px;
+}
+
+.form-label {
+    display: block;
+    margin: 0px 0px 16px 0px;
+	color: #939393;
+	background-color: transparent;
+	border: none;
+	font-family: "Instrument Sans";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.form-field {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-style: none;
+    border: 1px solid #939393;
+	background: #393939;
+}
+
+.submit-btn {
+	border: solid 1px #CCCCCC;
+	width: 22%;
+	background-image: url("../images/arrow.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: #FFFFFF;
+	padding: 0;
+}
+
+form {
+	display: flex;
+	width: 140%;
+}
+
+form, input {
+	color: #939393;
+	font-family: "Instrument Sans";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+}
+
+input[type=text] {
+  padding: 0 10px;
+}
+
+.hidden-desktop { /* HIDES MOBILE NAV VIEW */
+    display: none;
+}
+
+.hidden-desktop-column { /* HIDES MOBILE NAV VIEW */
+    display: none;
+}
+
+/* SMARTPHONE VERSION */
+
+@media screen and (max-width: 480px) {
+
+    /* LAYOUT CHANGES */
+
+    .hidden-mobile { /* HIDES DESKTOP VIEW */
+        display: none;
+    } 
+
+    .hidden-desktop {
+        display: flex;
+    }
+
+    .hide {
+    	display: none;
+    }
+
+    .margin-default { 
+        margin: 0 24px;
+    }
+
+    .margin-content { 
+    	margin: 0 24px;
+    }
+
+    .padding-default {
+        padding: 30px 0;
+    }
+
+    .padding-50 {
+    	padding: 30px 0;
+    }
+
+    .padding-above-footer {
+    	padding-bottom: 120px;
+	}
+
+    /* STYLES */
+	
+	h1 { /* Page titles */
+		font-size: 32px;
+	}
+
+    h3 {
+		font-size: 40px;
+	}
+
+	.caption { /* SECTION CAPTIONS */
+		font-size: 12px;
+		margin: 10px 0;
+	}
+
+	/* BUTTONS */
+
+	button {
+		padding: 12px 8px;
+	}
+
+	/* PADDING */
+
+	.padding-bottom {
+		padding-bottom: 30px;
+	}
+
+    /* HERO */
+
+    .hero-div {
+    	padding: 10px 0 20px 0;
+    	margin-bottom: 30px;
+    }
+    .hero-mobile {
+	    display: grid;
+	    position: relative;
+    }
+
+    .home-hero-img {
+		width: 120%;
+		height: 185px;
+		object-fit: cover;
+    }
+
+    .hero-padding {
+    	padding-top: 30px;
+    }
+
+    .home-front-div { /* WELCOME TO YALE SMALL SQUARE */
+		position: absolute;
+	    grid-area: 1/1; 
+	    justify-self: start; 
+	    z-index: 2; 
+		background-color: #F6F6F6;
+		padding: 20px 30px;
+		top: 0;
+		max-height: 65%;
+		width: 70%;
+	}
+
+	.home-back-div { /* BIG HERO IMG */
+		position: absolute;
+		bottom: 10px;
+	    grid-area: 1/1;
+	    justify-self: end; 
+	    z-index: 1;
+	    width: 70%;
+	}
+
+	.hero-box-column { /* KEEPS CONTENT IN THE GRAY SQUARE IN A COLUMN */
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: space-evenly;
+	}
+
+	/* HOME GRID */
+
+	.grid-container {
+		display: grid;
+		grid-template: 1fr 1fr 1fr / 1fr 1fr;
+	}
+
+	.grid-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background-color: #00356B;
+		padding: 10px 0 10px 10px;
+		height: 170px;
+	}
+
+	.hidden-desktop-column {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.box-label {
+		color: #FFF;
+		font-family: "Instrument Sans";
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 400;
+		margin: 10px 0 0 0;
+	}
+
+	.box-text {
+		line-height: 150%;
+		padding: 20px 0;
+	}
+
+	.icon-resize {
+		scale: 75%;
+	}
+
+	/* TESTIMONIALS */
+
+	.flex-gap-25 {
+		gap: 10px;
+	}
+
+	.quote {
+		font-size: 13px;
+		padding: 20px 0;
+	}
+
+	/* CALENDAR */
+
+	.calendar-grid {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.middle-align {
+		display: flex;
+		justify-content: center;
+	}
+
+	/* FOOTER */
+
+	.footer-nav-flex{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.padding-footer {
+		padding: 55px 24px 100px 24px;
+		background: #272727;
+		color: white;
+	}
+
+	.flex-gap {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.form-field {
+	    display: block;
+	    width: 85%;
+	    height: 50px;
+	    border-style: none;
+	    border: 1px solid #939393;
+		background: #393939;
+	}
+
+	.submit-btn {
+		border: solid 1px #CCCCCC;
+		width: 15%;
+		background-image: url("../images/arrow.svg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: #FFFFFF;
+		padding: 0;
+	}
+
+	form {
+		display: flex;
+		width: 100%;
+		padding-bottom: 30px;
+	}
+
+	.footer-nav-flex {
+		display: grid;
+		grid-template: 1fr 1fr 1fr / 1fr 1fr;
+		gap: 15px;
+		width: 100%;
+	}
+
+	.underline {
+		margin-bottom: 15px;
+	}
+
+	.flex-gap-50 {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.newsletter {
+		font-size: 20px;
+	}
+
+	.bold {
+		color: #FFF;
+		text-align: right;
+		font-family: "Instrument Sans";
+		font-size: 16px;
+	}
+
+	.reverse { /* SECONDARY BTN */
+		border-width: 2px;
+		padding: 12px 14px;
+	}
+}
+

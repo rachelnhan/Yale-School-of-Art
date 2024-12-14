@@ -1,0 +1,215 @@
+/* OTHER PAGE HERO */
+
+.hero-img {
+	width: 45%;
+	height: auto;
+	float: right;
+}
+
+.hero-img-div { /* image always in front */
+	position: absolute;
+    grid-area: 1/1; 
+    z-index: 2;
+    justify-self: end;
+    right: 0;
+    bottom: 0;
+}
+
+.hero-text-div { /* text always in back */
+	position: absolute;
+    grid-area: 1/1;
+    align-content: center;
+    justify-self: start; 
+    z-index: 1;
+    background-color: #F6F6F6;
+    width: 70%;
+    padding: 50px 0;
+}
+
+.external-hero-text { /* HERO TEXT WIDTH CONSTRAINTS */
+	margin-left: 95px;
+	max-width: 50%;
+}
+
+/* APPLY GRID */
+
+.grid-container-apply {
+	display: grid;
+	grid-template: 1fr 1fr 1fr / 1fr 1fr;
+	grid-gap: 2px;
+}
+
+.grid-item-apply {
+	display: flex;
+	flex-direction: column;
+	background-color: #00356B;
+	padding: 30px 0 30px 25px;
+	height: 249px;
+	justify-content: end;
+}
+
+/* FINANCING GRID */
+
+.finance-grid {
+	display: grid;
+	grid-area: 1 fr 1fr 1fr / 1fr;
+	border-top: 1px solid black;
+}
+
+.finance-grid-item {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid black;
+	padding: 20px 0;
+	align-items: center;
+	padding-right: 20px;
+}
+
+.finance-text {
+	color: #00356B;
+	font-family: "Instrument Sans";
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 500;
+}
+
+/* SMARTPHONE VERSION */
+
+@media screen and (max-width: 480px) {
+
+	.hidden-desktop-column {
+		padding-top: 40px;
+	}
+
+	/* STYLES */
+	.title {
+		font-size: 32px;
+		width: auto;
+	}
+
+	.hero-div {
+	    display: flex;
+	    flex-direction: column;
+	    width: 100%;
+	    padding: 20px 0 30px 0;
+	    margin-bottom: 30px;
+	    position: static;
+	}
+
+	.hero-padding {
+		padding-bottom: 0px;
+	}
+
+	.home-front-div { /* WELCOME TO YALE SMALL SQUARE */
+		position: static;
+		z-index: 1;
+	}
+
+	.home-back-div { /* BIG HERO IMG */
+		position: static;
+		z-index: 1;
+	}
+
+	.hero-img {
+		float: none;
+		width: 100%;
+		height: 40%;
+		object-fit: cover;
+		object-position: 0 80%;
+	}
+
+	.hero-img-div {
+		position: static;
+		z-index: 1;
+	}
+
+	.hero-text-div {
+		position: static;
+		width: 100%;
+		align-content: unset;
+	}
+
+	.hero-box-column { /* KEEPS CONTENT IN THE GRAY SQUARE IN A COLUMN */
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+		height: auto;
+		gap: 18px;
+		padding-left: 24px;
+	}
+
+	.external-hero-text {
+	    margin-left: 0px;
+	    max-width: 90%;
+	}
+
+	.box-label {
+		font-size: 20px;
+	}
+
+	/* APPLICATIONS */
+
+	.flex-row-top {
+	    gap: 40px;
+	}
+
+	.grid-2-item {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.grid-2 {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	.margin-content-left {
+		margin-left: 24px;
+	}
+
+	.margin-content-right {
+		margin-left: 24px;
+		margin-right: 24px;
+	}
+
+	.spacing {
+		gap: 25px;
+	}
+
+	iframe {
+		max-width: 100%;
+		height: 240px;
+	}
+
+	.side-div {
+		max-width: 100%;
+	}
+
+	.padding-default {
+		padding: 30px 0;
+	}
+
+	/* GRID */
+
+	.grid-container-apply {
+	  display: grid;
+	  grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr;
+	  grid-gap: 2px;
+	}
+
+	.grid-item-apply {
+		display: flex;
+		flex-direction: column;
+		background-color: #00356B;
+		padding: 20px 0 20px 24px;
+		height: 170px;
+		justify-content: end;
+	}
+
+	.box-label {
+		font-size: 20px;
+	}
+
+}

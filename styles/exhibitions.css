@@ -1,0 +1,231 @@
+/* OTHER PAGE HERO */
+
+.hero-img {
+	width: 45%;
+	height: auto;
+	float: right;
+}
+
+.hero-img-div { /* image always in front */
+	position: absolute;
+    grid-area: 1/1; 
+    z-index: 2;
+    justify-self: end;
+    right: 0;
+    bottom: 0;
+}
+
+.hero-text-div { /* text always in back */
+	position: absolute;
+    grid-area: 1/1;
+    align-content: center;
+    justify-self: start; 
+    z-index: 1;
+    background-color: #F6F6F6;
+    width: 70%;
+    padding: 50px 0;
+}
+
+.external-hero-text { /* HERO TEXT WIDTH CONSTRAINTS */
+	margin-left: 95px;
+	max-width: 50%;
+}
+
+/* GALLERY GRID */
+
+.gallery-grid {
+	display: grid;
+	grid-template: 1fr / 3fr 1fr 1fr;
+	grid-column-gap: 20.75px;
+}
+
+.gallery-grid-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.gallery-right {
+	display: flex;
+	justify-content: space-between;
+}
+
+.gallery-text {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 150%;
+	width: 263px;
+}
+
+.gallery-date {
+	color: #5189CC;
+	font-size: 13px;
+	font-weight: 500;
+	width: 263px;
+}
+
+/* EXHIBITION CALENDAR */
+
+.whats-on-grid {
+	display: grid;
+	border-bottom: 1px solid black;
+	gap: 10%;
+}
+
+.whats-on-item {
+	display: flex;
+	flex-direction: row;
+	padding: 40px 0;
+	border-top: solid 1px black;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+.whats-on-text {
+	color: #00356B;
+	font-family: "Instrument Sans";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 150%;
+	width: 700px;
+}
+
+.whats-on-flex {
+	display: flex;
+	justify-content: space-between;
+	gap: 50px;
+}
+
+.whatson-left-align {
+	display: flex;
+	align-self: flex-end
+	
+}
+
+/* SMARTPHONE VERSION */
+
+@media screen and (max-width: 480px) {
+
+	.hidden-desktop-column {
+		padding-top: 40px;
+	}
+
+	/* STYLES */
+	.title {
+		font-size: 32px;
+		width: auto;
+	}
+
+	.hero-div {
+	    display: flex;
+	    flex-direction: column;
+	    width: 100%;
+	    padding: 20px 0 30px 0;
+	    margin-bottom: 30px;
+	    position: static;
+	}
+
+	.hero-padding {
+		padding-bottom: 50px;
+	}
+
+	.home-front-div { /* WELCOME TO YALE SMALL SQUARE */
+		position: static;
+		z-index: 1;
+	}
+
+	.home-back-div { /* BIG HERO IMG */
+		position: static;
+		z-index: 1;
+	}
+
+	.hero-img {
+		float: none;
+		width: 100%;
+		height: 40%;
+		object-fit: cover;
+		object-position: 0 80%;
+	}
+
+	.hero-img-div {
+		position: static;
+		z-index: 1;
+	}
+
+	.hero-text-div {
+		position: static;
+		width: 100%;
+		align-content: unset;
+	}
+
+	.hero-box-column { /* KEEPS CONTENT IN THE GRAY SQUARE IN A COLUMN */
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+		height: auto;
+		gap: 18px;
+		padding-left: 24px;
+	}
+
+	.external-hero-text {
+	    margin-left: 0px;
+	    max-width: 90%;
+	}
+
+	.box-label {
+		font-size: 20px;
+	}
+
+	.margin-content-left {
+		margin-left: 24px;
+	}
+
+	.margin-content-right {
+		margin-left: 24px;
+		margin-right: 24px;
+	}
+
+	.whats-on-grid {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.whats-on-flex {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.whats-on-item {
+		display: flex;
+		flex-direction: column;
+		padding: 30px 0;
+		border-top: solid 1px black;
+		gap: 10px;
+	}
+
+	.icon-resize {
+		scale: 100%;
+	}
+
+	.whats-on-text {
+		width: auto;
+	}
+
+	.buttons {
+		font-size: 14px;
+	}
+
+	/* GALLERY GRID */
+
+	.gallery-grid {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.spacing {
+		padding-bottom: 40px;
+	}
+}
