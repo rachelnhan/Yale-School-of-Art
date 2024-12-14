@@ -782,12 +782,11 @@ input[type=text] {
 
 	.form-field {
 	    display: block;
-	    width: 90%;
+	    width: 85%;
 	    height: 50px;
 	    border-style: none;
 	    border: 1px solid #939393;
 		background: #393939;
-		z-index: 1;
 	}
 
 	.submit-btn {
@@ -798,7 +797,6 @@ input[type=text] {
 		background-repeat: no-repeat;
 		background-color: #FFFFFF;
 		padding: 0;
-		z-index: 2;
 	}
 
 	form {
