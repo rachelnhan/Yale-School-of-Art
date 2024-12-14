@@ -455,6 +455,10 @@ h3 { /* BLUE BOX TEXT */
 
 /* FOOTER */ 
 
+footer, a {
+		font-size: 16px;
+	}
+
 .footer-column {
 	display: flex;
 	flex-direction: column;
@@ -752,17 +756,6 @@ input[type=text] {
 	}
 
 	/* FOOTER */
-
-	footer a {
-		color: white;
-		font-family: "Instrument Sans";
-		font-size: 16px;
-		font-style: normal;
-		font-weight: 700;
-		line-height: 0;
-		margin-bottom: 8px;
-	}
-
 
 	.footer-nav-flex{
 		display: flex;
