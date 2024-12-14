@@ -633,6 +633,15 @@ input[type=text] {
 		padding: 12px 8px;
 	}
 
+	a { /* BLUE BUTTON TEXT */
+		color: white;
+		font-family: "Instrument Sans";
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 700;
+		text-decoration: none;
+	}
+
 	/* PADDING */
 
 	.padding-bottom {
