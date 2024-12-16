@@ -99,8 +99,7 @@
 
 .whatson-left-align {
 	display: flex;
-	align-self: flex-end
-	
+	align-self: flex-end;
 }
 
 /* SMARTPHONE VERSION */
